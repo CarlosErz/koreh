@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/ts-plugin": "^1.5.1",
     "astro": "^4.3.5",
     "fs": "^0.0.1-security",
     "sharp": "^0.33.2",
