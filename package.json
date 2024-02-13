@@ -11,8 +11,9 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/vercel": "^7.3.0",
-    "astro": "^4.3.2",
+    "astro": "^4.3.5",
+    "fs": "^0.0.1-security",
+    "sharp": "^0.33.2",
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {

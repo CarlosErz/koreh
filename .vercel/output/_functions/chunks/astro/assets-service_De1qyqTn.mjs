@@ -1,43 +1,5 @@
-import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, M as MissingImageDimension, U as UnsupportedImageFormat, I as IncompatibleDescriptorOptions, a as UnsupportedImageConversion, b as MissingSharp } from '../astro_DjhrSkG8.mjs';
-
-function appendForwardSlash(path) {
-  return path.endsWith("/") ? path : path + "/";
-}
-function prependForwardSlash(path) {
-  return path[0] === "/" ? path : "/" + path;
-}
-function collapseDuplicateSlashes(path) {
-  return path.replace(/(?<!:)\/\/+/g, "/");
-}
-function removeTrailingForwardSlash(path) {
-  return path.endsWith("/") ? path.slice(0, path.length - 1) : path;
-}
-function removeLeadingForwardSlash(path) {
-  return path.startsWith("/") ? path.substring(1) : path;
-}
-function trimSlashes(path) {
-  return path.replace(/^\/|\/$/g, "");
-}
-function isString(path) {
-  return typeof path === "string" || path instanceof String;
-}
-function joinPaths(...paths) {
-  return paths.filter(isString).map((path, i) => {
-    if (i === 0) {
-      return removeTrailingForwardSlash(path);
-    } else if (i === paths.length - 1) {
-      return removeLeadingForwardSlash(path);
-    } else {
-      return trimSlashes(path);
-    }
-  }).join("/");
-}
-function isRemotePath(src) {
-  return /^(http|ftp|https|ws):?\/\//.test(src) || src.startsWith("data:");
-}
-function slash(path) {
-  return path.replace(/\\/g, "/");
-}
+import { isRemotePath, joinPaths } from '@astrojs/internal-helpers/path';
+import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, M as MissingImageDimension, U as UnsupportedImageFormat, I as IncompatibleDescriptorOptions, a as UnsupportedImageConversion, b as MissingSharp } from '../astro_vunIIwKY.mjs';
 
 const VALID_SUPPORTED_FORMATS = [
   "jpeg",
@@ -377,4 +339,4 @@ const sharp$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   default: sharp_default
 }, Symbol.toStringTag, { value: 'Module' }));
 
-export { DEFAULT_HASH_PROPS as D, isLocalService as a, isRemoteImage as b, isRemotePath as c, isRemoteAllowed as d, appendForwardSlash as e, collapseDuplicateSlashes as f, sharp$1 as g, isESMImportedImage as i, joinPaths as j, prependForwardSlash as p, removeTrailingForwardSlash as r, slash as s, trimSlashes as t };
+export { DEFAULT_HASH_PROPS as D, isLocalService as a, isRemoteImage as b, isRemoteAllowed as c, isESMImportedImage as i, sharp$1 as s };
