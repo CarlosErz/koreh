@@ -2,8 +2,8 @@ import fs from 'fs';
 import sharp from 'sharp';
 
 // Ruta de la carpeta de entrada y salida
-const inputFolder = '../src/assets';
-const outputFolder = '../src/assets/reduce';
+const inputFolder = '../public/';
+const outputFolder = '../public/input/';
 
 fs.readdir(inputFolder, (err, files) => {
   if (err) {

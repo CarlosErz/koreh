@@ -7,68 +7,146 @@ import Navegation from "../components/Navegation.astro";
 
 <Layout title="Koreh">
   <Banner img="../../public/image 13.webp" dc="/" server="0.10.10" />
-  <Navegation  />
-    <article class=" bg-slate-800  h-3/6 w-full">
-
-    </article>
-
-  
-
-
-  </section>
-
-  <section id="STAFF" class="flex flex-col gap-10 my-10">
-    <h2 class="text-3xl items-center text-center font-bold text-white">FUNDADORES</h2>
-    <div class="flex flex-row gap-10 mx-20 max-sm:mx-0 max-sm:justify-center max-minicelular:flex-col max-minicelular:justify-center max-minicelular:items-center">
-      <Card
-        nametag="XBO"
-        idioma="español"
-        userDc="XBO"
-        skin="../../public/cofunder.webp"
-      />
-      <Card
-        nametag="XBO"
-        idioma="español"
-        userDc="XBO"
-        skin="../../public/founder.webp"
-      />
-    </div>
-    <h2 class="text-3xl items-center text-center font-bold">ADMINISTRADORES</h2>
-    <div
-      class="grid grid-cols-3 gap-4 max-w[1000px] justify-items-center my-6 max-sm:grid-cols-2 max-sm:gap-3 max-minicelular:grid-cols-1"
+  <Navegation/>
+  <div class="content">
+    <section
+      class="w-full h-screen columnas mt-10 gap-2 justify-center items-center"
     >
-      <Card
-        nametag="XBO"
-        idioma="español"
-        userDc="XBO"
-        skin="../../public/skin1render1,0 1.webp"
-      />
-      <Card
-        nametag="XBO"
-        idioma="español"
-        userDc="XBO"
-        skin="../../public/skinrender2 1.webp"
-      />
-      <Card
-        nametag="XBO"
-        idioma="español"
-        userDc="XBO"
-        skin="../../public/skinrender4 1.webp"
-      />
-      <Card
-        nametag="XBO"
-        idioma="español"
-        userDc="XBO"
-        skin="../../public/skinrender5 1.webp"
-      />
-      <Card
-        nametag="XBO"
-        idioma="español"
-        userDc="XBO"
-        skin="../../public/skinrender6 1.webp"
-      />
-    </div>
-  </section>
+      <article
+        class="bg-slate-800 h-full w-full rounded-xl border border-slate-700 relative"
+      >
+        <div class="content_text">
+          <h3
+            class="font-bold text-slate-200 text-6xl p-10 max-sm:text-4xl linear-wipe"
+          >
+            UNETE A NUESTRO SERVIDOR!
+          </h3>
+        </div>
+
+        <img
+          class="w-2/3 right-0 bottom-0 absolute max-sm:w-2/4"
+          src="../../public/home_img.webp"
+          alt=""
+        />
+      </article>
+      <iframe
+        src="https://discord.com/widget?id=772655702979248138&theme=dark"
+        class="w-5/6 h-full max-sm:w-full"
+        allowtransparency="true"
+        title="Discord"
+        frameborder="0"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+      ></iframe>
+    </section>
+
+    <section id="STAFF" class="flex flex-col gap-10 my-10">
+      <h2 class="text-3xl items-center text-center font-bold text-white">
+        FUNDADORES
+      </h2>
+      <div
+        class="flex flex-row gap-10 max-sm:mx-0 max-sm:justify-center max-minicelular:flex-col
+    max-sm:gap-2
+    max-minicelular:justify-center max-minicelular:items-center"
+      >
+        <Card
+          nametag="sxdico"
+          idioma="español"
+          userDc="sxdico"
+          skin="../../public/founder.webp"
+        />
+        <Card
+          nametag="XBO"
+          idioma="español"
+          userDc="XBO"
+          skin="../../public/cofunder.webp"
+        />
+      </div>
+      <h2 class="text-3xl items-center text-center font-bold max-sm:text-2xl">
+        ADMINISTRADORES
+      </h2>
+      <div
+        class="grid grid-cols-3 gap-4 my-6 max-sm:grid-cols-2 max-sm:gap-3 max-minicelular:grid-cols-1
+        max-sm:justify-items-center"
+      >
+        <Card
+          nametag="XBO"
+          idioma="español"
+          userDc="XBO"
+          skin="../../public/skin1render1,0 1.webp"
+        />
+        <Card
+          nametag="XBO"
+          idioma="español"
+          userDc="XBO"
+          skin="../../public/skinrender2 1.webp"
+        />
+        <Card
+          nametag="XBO"
+          idioma="español"
+          userDc="XBO"
+          skin="../../public/skinrender4 1.webp"
+        />
+        <Card
+          nametag="XBO"
+          idioma="español"
+          userDc="XBO"
+          skin="../../public/skinrender5 1.webp"
+        />
+        <Card
+          nametag="XBO"
+          idioma="español"
+          userDc="XBO"
+          skin="../../public/skinrender6 1.webp"
+        />
+      </div>
+    </section>
+  </div>
 </Layout>
 
-<style></style>
+<style>
+  .columnas {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    justify-items: center;
+  }
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .content_text {
+    color: #3c3c3c;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @keyframes textShine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  h3 {
+    background: linear-gradient(
+      to right,
+      #ffffff 20%,
+      #cacaca 30%,
+      #808080 70%,
+      #eeeeee 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+  }
+  @media screen and (max-width: 768px) {
+    .columnas {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>
